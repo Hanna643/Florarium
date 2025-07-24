@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TZ</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <link rel="stylesheet" href="styles/magnific-popup.css">
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
+    <link rel="stylesheet" href="styles/animate.min.css"/>
+    <link rel="stylesheet" href="styles/parsley.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="../МОДУЛЬ 5. Продвинутые фронтенд-средства/bootstrap-5.3.5-examples/bootstrap-5.3.5-examples/урок 5. Обработка форм и Ajax c примера мини/checkout.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__container">
+        <div class="header__burger" id="burger">
+            <img src="images/burger.png" class="burger" alt="burger">
+        </div>
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="logo">
+        </a>
+        <nav class="menu" id="menu">
+            <div class="menu__close">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+                                            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+                                            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+                                            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+                                            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+                                            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+                                            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+                                    </g>
+                                </g>
+                            </svg>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Флорариумы</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Акции</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Как мы работаем</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Доставка и оплата</a>
+                </li>
+            </ul>
+            <a class="button button-call popup-with-zoom-anim" href="#small-dialog">
+                Заказать звонок
+            </a>
+        </nav>
+    </div>
+</header>
+<section class="main">
+    <div class="container main__container">
+        <div class="main__content">
+            <h1 class="main__title wow animate__pulse">Сад для вашего дома в Краснодаре</h1>
+            <div class="main__info-text">Делайте сюрпризы для своих любимых незабываемыми вместе с Florarium!</div>
+            <div class="main__actions">
+                <button type="button" class="button viewing-button">Посмотреть флорариумы</button>
+            </div>
+            <div class="main__info-images">
+                <div class="main__info-image">
+                    <div>
+                        <img src="images/ecology.png" alt="уход">
+                    </div>
+                    <p> Очень неприхотливы
+                        и просты в уходе</p>
+                </div>
+
+                <div class="main__info-image">
+                    <div>
+                        <img src="images/water.png" alt="полив">
+                    </div>
+                    <p> Поливать раз в неделю</p>
+                </div>
+
+                <div class="main__info-image">
+                    <div>
+                        <img src="images/clock.png" alt="доставка">
+                    </div>
+                    <p> Доставим бесплатно
+                        в любое время дня и ночи</p>
+                </div>
+            </div>
+        </div>
+        <div class="main__image">
+            <img src="images/flowers.png" class="main__img" alt="Цветы">
+        </div>
+    </div>
+</section>
+<section class="cards">
+    <div class="container cards__container">
+        <h2>О нас</h2>
+        <div class="cards__items cards__item1 wow animate__fadeInLeft">
+            <div class="cards__image">
+                <img src="images/fl1.png" alt="рисунок1">
+            </div>
+            <div class="text18">Мы влюбленны в цветы и в свою работу. На протяжении 8 лет мы создаем красоту из живых
+                цветов, составляем композиции из эхеверии и крассулы эксперементируем с формами, цветами и сочетаниями.
+            </div>
+        </div>
+        <div class="cards__items cards__item2 wow animate__fadeInRight">
+            <div class="cards__image">
+                <img src="images/fl2.png" alt="рисунок2">
+            </div>
+            <div class="text18">Мы дарим каждому клиенту настоящую радость и
+                любовь - это миссия нашего магазина. Вдохновляясь современными тенденциями во флористике, мы придумываем
+                что-то новое, стремимся показать самые необычные и интересные сочетания цветов. К созданию флорариумов
+                подходим с душой и любовью.
+            </div>
+        </div>
+    </div>
+</section>
+<section class="products">
+    <div class="container products__container">
+        <h3 class="wow animate__pulse">Наши растения</h3>
+        <ul class="products__list">
+            <li class="products__name">
+                <div id="Florariums" class="products__link">Флорариумы</div>
+            </li>
+            <li class="products__name">
+                <div id="Orchridariums" class="products__link">Орхридариумы</div>
+            </li>
+        </ul>
+
+        <div id="itemsFlorariums" class="products__items">
+            <!--1-->
+            <div class="products__item1">
+                <div class="products__image">
+                    <img src="images/Florarium1.png" alt="Florarium1">
+                </div>
+                <div class="products__info1">
+                    <h4>Ночная сказка</h4>
+                    <div class="products__text1 text18 ">Флорариум с яркими суккулентами в вазе ручной работы</div>
+                    <div class="price">5500 руб.</div>
+                </div>
+            </div>
+            <!--            2-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Florarium2.png" alt="Florarium2">
+                </div>
+                <div class="products__info">
+                    <h4>Суккуленты </h4>
+                    <div class="price">2500 руб.</div>
+                </div>
+            </div>
+            <!--   3-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Florarium3.png" alt="Florarium3">
+                </div>
+                <div class="products__info">
+                    <h4>Мини сад </h4>
+                    <div class="price">3000 руб.</div>
+                </div>
+            </div>
+            <!--  4-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Florarium4.png" alt="Florarium4">
+                </div>
+                <div class="products__info">
+                    <h4>Морской мир </h4>
+                    <div class="price">2000 руб.</div>
+                </div>
+            </div>
+            <!--5-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Florarium5.png" alt="Florarium5">
+                </div>
+                <div class="products__info">
+                    <h4>Марс </h4>
+                    <div class="price">4500 руб.</div>
+                </div>
+            </div>
+
+        </div>
+        <div id="itemsOrchridariums" class="products__items" style="display: none;">
+            <!--1-->
+            <div class="products__item1">
+                <div class="products__image">
+                    <img src="images/Orchridarium1.png" alt="Orchridarium1">
+                </div>
+                <div class="products__info1">
+                    <h4>Дневной сон</h4>
+                    <div class="products__text1 text18 ">Орхридариум в вазе ручной работы</div>
+                    <div class="price">7500 руб.</div>
+                </div>
+            </div>
+            <!--            2-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Orchridarium2.png" alt="Orchridarium2">
+                </div>
+                <div class="products__info">
+                    <h4>Бонсай </h4>
+                    <div class="price">3500 руб.</div>
+                </div>
+            </div>
+            <!--   3-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Orchridarium3.png" alt="Orchridarium3">
+                </div>
+                <div class="products__info">
+                    <h4>Мини букет</h4>
+                    <div class="price">2000 руб.</div>
+                </div>
+            </div>
+            <!--  4-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Orchridarium4.png" alt="Orchridarium4">
+                </div>
+                <div class="products__info">
+                    <h4>Аквариум</h4>
+                    <div class="price">4000 руб.</div>
+                </div>
+            </div>
+            <!--5-->
+            <div class="products__item">
+                <div class="products__image">
+                    <img src="images/Orchridarium5.png" alt="Orchridarium5">
+                </div>
+                <div class="products__info">
+                    <h4>Ананас </h4>
+                    <div class="price">1500 руб.</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="products__actions">
+            <a type="button" class="button viewing-button popup-with-zoom-anim" href="#popup-2">Оформить заказ</a>
+        </div>
+    </div>
+</section>
+<section class="present">
+    <div class="container present__container">
+        <div class="present__image">
+            <img class="Roshen" src="images/Roshen.png" alt="Roshen">
+            <div class="Rafaello wow animate__pulse">
+                <img src="images/Rafaello.png" alt="Rafaello">
+            </div>
+        </div>
+        <div class="present__text">
+            <h3>Подарок к каждому заказу </h3>
+            <div class="present__info">
+                <p>К каждому букету прилагается бесплатная <span>открытка или сладкий презент.</span></p>
+                <p>Закажите любой флорариум в период <span>с 20 апреля до 20 сентября</span> в наших магазинах и
+                    выберите в подарок
+                    открытку и большую коробку конфет Rafaello или Roshen. </p>
+                <p>Это абсолютно бесплатно, потому что мы любим своих клиентов и хотим дарить вам радость так же, как вы
+                    делаете это для своих любимых!</p>
+            </div>
+            <div class="present__actions">
+                <button type="button" class="button viewing-button">Посмотреть флорариумы</button>
+            </div>
+        </div>
+        <img class="leaves1" src="images/leaves1.png" alt="leaves1">
+        <div class="present__leaves2">
+        <img class="leaves2" src="images/leaves2.png" alt="leaves2">
+        </div>
+    </div>
+</section>
+<section class="instructions">
+    <div class="container instructions__container">
+        <h3>Как мы работаем</h3>
+        <div class="instructions__cards">
+            <!--1-->
+            <div class="instructions__card order-1 z-0 wow animate__slideInRight"  data-wow-delay="0.2s">
+                <div class="instructions__cardImage">
+                    <img src="images/cardImage1.png" alt="cardImage1">
+                </div>
+                <div class="instructions__cardInfo">
+                    <h4>01.Сделайте заказ</h4>
+                    <div class="instructions__cardText">
+                        Выберите букет и заполните форму заказа на сайте или позвоните нам. Укажите способ доставки.
+                        После
+                        оформления заказа наш менеджер свяжется с вами в теченеи 10 минут для уточнения деталей заказа.
+                    </div>
+                </div>
+            </div>
+
+            <!--2-->
+            <div class="instructions__card order-3 z-1  wow animate__slideInRight" data-wow-delay="1.0s">
+                <div class="instructions__cardImage">
+                    <img src="images/cardImage2.png" alt="cardImage2">
+                </div>
+                <div class="instructions__cardInfo">
+                    <h4>02.Оплатите заказ</h4>
+                    <div class="instructions__cardText">
+                        Вы можете оплатить букет прямо на сайте онлайн или наличными нашему курьеру.
+                    </div>
+                </div>
+            </div>
+            <!--3-->
+            <div class="instructions__card order-2 z-2  wow animate__slideInRight" data-wow-delay="0.6s">
+                <div class="instructions__cardImage">
+                    <img src="images/cardImage3.png" alt="cardImage3">
+                </div>
+                <div class="instructions__cardInfo">
+                    <h4>03.Ждите доставку</h4>
+                    <div class="instructions__cardText">
+                        В назначенный день и время мы доставим ваш букет абсолютно бесплатно. Он будет бережно упакован
+                        и вручен
+                        вам вместе с подарками, идущими в комплекте с букетом.
+                    </div>
+                </div>
+            </div>
+            <!--4-->
+            <div class="instructions__card order-4 z-3  wow animate__slideInRight" data-wow-delay="1.4s">
+                <div class="instructions__cardImage">
+                    <img src="images/cardImage4.png" alt="cardImage4">
+                </div>
+                <div class="instructions__cardInfo">
+                    <h4>04.Фотоотчет</h4>
+                    <div class="instructions__cardText">
+                        Сделайте фотографию с нашим букетом, отметьте наш аккаунт в инстаграм @flowerfantasy и получите
+                        скидку
+                        10% на следующий заказ в течение месяца.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery">
+    <div class="container gallery__container">
+        <h3>Фотогалерея</h3>
+        <div class="gallery__items ">
+            <div class="gallery__item item-1">
+                <a href="images/imageBig1.png" class="gallery-popup">
+                    <img src="images/image1.png" alt="Самый красивый подарок 1">
+                </a>
+            </div>
+            <div class="gallery__item item-2">
+                <a href="images/imageBig2.png" class="gallery-popup">
+                    <img src="images/image2.png" alt="Самый красивый подарок 2">
+                </a>
+            </div>
+            <div class="gallery__item item-3">
+                <a href="images/imageBig3.png" class="gallery-popup">
+                    <img src="images/image3.png" alt="Самый красивый подарок 3">
+                </a>
+            </div>
+            <div class="gallery__item item-4">
+                <a href="images/imageBig4.png" class="gallery-popup">
+                    <img src="images/image4.png" alt="Самый красивый подарок 4">
+                </a>
+            </div>
+            <div class="gallery__item item-5">
+                <a href="images/imageBig5.png" class="gallery-popup">
+                    <img src="images/image5.png" alt="Самый красивый подарок 5">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="container reviews__container">
+        <h3>Отзывы наших клиентов</h3>
+        <div class="reviews__items autoplay">
+            <!--        1-->
+            <div class="reviews__item">
+                <div class="reviews__image">
+                    <img src="images/review1.png" alt="Мурад">
+                </div>
+                <h4>Мурад</h4>
+                <div class="reviews__text">
+                    Спасибо большое за вашу работу. Флорариум замечательный! Моя девушка была в восторге. Доставка была
+                    вовремя и курьер был очень вежливый. Буду советовать друзьям!
+                </div>
+            </div>
+            <!--        2-->
+            <div class="reviews__item">
+                <div class="reviews__image">
+                    <img src="images/review2.png" alt="Кирилл">
+                </div>
+                <h4>Кирилл</h4>
+                <div class="reviews__text">
+                    Я покупал флорариум в подарок своей подруге. Хочу выразить свою благодарность за
+                    дополнительный подарок к покупке.
+                </div>
+            </div>
+            <!--        3-->
+            <div class="reviews__item">
+                <div class="reviews__image">
+                    <img src="images/review3.png" alt="Юля">
+                </div>
+                <h4>Юля</h4>
+                <div class="reviews__text">
+                    Молодцы! Хорошо что есть такой сервис!!! Я покупаю уже несколько раз флорариумы. Всегда отличные
+                    композиции и быстрая доставка.
+                </div>
+            </div>
+            <!--        3-->
+            <div class="reviews__item">
+                <div class="reviews__image">
+                    <img src="images/review3.png" alt="Юля">
+                </div>
+                <h4>Юля</h4>
+                <div class="reviews__text">
+                    Молодцы! Хорошо что есть такой сервис!!! Я покупаю уже несколько раз флорариумы. Всегда отличные
+                    композиции и быстрая доставка.
+                </div>
+            </div>
+            <!--        3-->
+            <div class="reviews__item">
+                <div class="reviews__image">
+                    <img src="images/review3.png" alt="Юля">
+                </div>
+                <h4>Юля</h4>
+                <div class="reviews__text">
+                    Молодцы! Хорошо что есть такой сервис!!! Я покупаю уже несколько раз флорариумы. Всегда отличные
+                    композиции и быстрая доставка.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="conditions">
+    <div class="container conditions__container">
+        <div class="conditions__delivery">
+            <h3>Доставка</h3>
+            <div class="conditions__card">
+                <div class="conditions__cardImage">
+                    <img src="images/conditions1.png" alt="conditions1">
+                </div>
+                <div class="conditions__cardInfo">
+                    <h4>Самовывоз</h4>
+                    <div class="conditions__cardText">
+                        Бесплатно по адресу: Краснодар, проспект Некрасова, д. 24. Вход со двора.
+                    </div>
+                </div>
+            </div>
+            <div class="conditions__card">
+                <div class="conditions__cardImage">
+                    <img src="images/conditions2.png" alt="conditions2">
+                </div>
+                <div class="conditions__cardInfo">
+                    <h4>Доставка нашим курьером</h4>
+                    <div class="conditions__cardText">
+                        Бесплатно по указанному вами адресу. Время доставки согласовывается с менеджером по телефону.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="conditions__payment">
+            <h3>Оплата</h3>
+            <div class="conditions__card">
+                <div class="conditions__cardImage">
+                    <img src="images/conditions3.png" alt="conditions3">
+                </div>
+                <div class="conditions__cardInfo">
+                    <h4>Оплата картой на сайте</h4>
+                    <div class="conditions__cardText">
+                        Мы используем безопасные методы оплаты, и вы можете оплатить заказ прямо на сайте.
+                    </div>
+                </div>
+            </div>
+            <div class="conditions__card">
+                <div class="conditions__cardImage">
+                    <img src="images/conditions4.png" alt="conditions4">
+                </div>
+                <div class="conditions__cardInfo">
+                    <h4>Наличными курьеру</h4>
+                    <div class="conditions__cardText">
+                        Вы можете произвести оплату наличными на руки нашему курьеру и получить чек заказа.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__logo-rights">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="footer__rights">©2020. Все права защищены</div>
+        </div>
+
+        <div class="footer__icon">
+            <a href="#" class="footer__instagram">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32px" height="32px">
+                    <path d="M 7.695313 3.019531 C 6.867188 3.011719 6.242188 3.050781 5.71875 3.320313 C 5.503906 3.429688 5.351563 3.570313 5.234375 3.734375 C 5.171875 3.816406 5.113281 3.890625 5.085938 4.0625 C 5.070313 4.144531 5.058594 4.28125 5.144531 4.429688 C 5.230469 4.582031 5.414063 4.683594 5.539063 4.703125 C 5.632813 4.714844 5.832031 4.796875 5.867188 4.84375 C 5.949219 4.960938 5.980469 5.046875 5.992188 5.09375 C 6.003906 5.140625 6 5.109375 6 5.109375 L 6 5.15625 C 6 5.15625 6.03125 5.648438 6.011719 6.15625 C 6 6.40625 5.976563 6.667969 5.9375 6.84375 C 5.898438 7.019531 5.800781 7.0625 5.941406 6.980469 C 5.84375 7.039063 5.878906 7.0625 5.757813 7 C 5.632813 6.941406 5.308594 6.667969 4.882813 5.902344 C 4.457031 5.132813 4.148438 4.734375 4.078125 4.648438 C 4.050781 4.570313 3.984375 4.410156 3.757813 4.234375 C 3.464844 4.007813 3.164063 4.003906 3.164063 4.003906 L 3.136719 4 L 0.953125 4 C 0.953125 4 0.828125 4.003906 0.683594 4.035156 C 0.539063 4.066406 0.332031 4.101563 0.136719 4.34375 C 0.136719 4.34375 0.132813 4.34375 0.132813 4.34375 C -0.0664063 4.597656 -0.03125 4.828125 -0.015625 4.96875 C 0.00390625 5.113281 0.046875 5.226563 0.046875 5.226563 L 0.0546875 5.25 L 0.0664063 5.273438 C 0.0664063 5.273438 1.734375 8.832031 3.726563 11 C 5.597656 13.039063 7.765625 13 7.765625 13 L 8.996094 13 L 9.023438 12.996094 C 9.023438 12.996094 9.417969 13.015625 9.75 12.644531 C 9.917969 12.453125 9.957031 12.273438 9.976563 12.140625 C 10 12.003906 10 11.894531 10 11.894531 L 10 11.925781 C 10 11.925781 10.015625 11.667969 10.085938 11.398438 C 10.121094 11.265625 10.171875 11.132813 10.21875 11.058594 C 10.242188 11.015625 10.242188 11.027344 10.25 11.015625 C 10.335938 11.078125 10.476563 11.222656 10.625 11.40625 C 10.929688 11.769531 11.273438 12.273438 11.753906 12.621094 C 12.101563 12.867188 12.429688 12.976563 12.679688 13.015625 C 12.847656 13.042969 12.96875 13.039063 13.050781 13.03125 L 14.75 13 L 14.765625 13 C 14.765625 13 15.117188 12.992188 15.46875 12.769531 C 15.640625 12.660156 15.839844 12.460938 15.90625 12.175781 C 15.976563 11.890625 15.898438 11.582031 15.734375 11.296875 C 15.789063 11.394531 15.722656 11.265625 15.671875 11.164063 C 15.621094 11.0625 15.542969 10.925781 15.425781 10.753906 C 15.199219 10.417969 14.824219 9.945313 14.203125 9.34375 C 13.910156 9.0625 13.722656 8.90625 13.605469 8.796875 C 13.640625 8.746094 13.644531 8.742188 13.777344 8.585938 C 13.988281 8.339844 14.296875 7.976563 14.6875 7.433594 C 15.15625 6.777344 15.496094 6.242188 15.714844 5.796875 C 15.933594 5.355469 16.109375 4.988281 15.914063 4.535156 C 15.808594 4.289063 15.621094 4.195313 15.484375 4.136719 C 15.34375 4.078125 15.21875 4.054688 15.101563 4.035156 C 14.871094 4 14.667969 4 14.667969 4 L 12.6875 4.015625 C 12.628906 4.003906 12.402344 3.960938 12.109375 4.148438 C 11.820313 4.328125 11.753906 4.519531 11.738281 4.578125 C 11.691406 4.644531 11.363281 5.109375 10.90625 5.921875 C 10.445313 6.742188 10.132813 6.964844 10.09375 6.984375 C 10.082031 6.972656 10.105469 6.976563 10.050781 6.945313 C 10.027344 6.925781 10.003906 6.910156 9.984375 6.699219 C 9.96875 6.488281 9.988281 6.15625 9.988281 5.765625 C 9.988281 4.925781 10.0625 4.488281 10.019531 4.070313 C 10 3.859375 9.914063 3.601563 9.726563 3.429688 C 9.539063 3.261719 9.335938 3.199219 9.125 3.144531 C 8.792969 3.0625 8.34375 3.027344 7.695313 3.019531 Z M 7.6875 4.019531 C 8.292969 4.027344 8.71875 4.074219 8.875 4.113281 C 9.007813 4.148438 9.027344 4.164063 9.023438 4.15625 C 9.023438 4.164063 9.023438 4.160156 9.023438 4.171875 C 9.039063 4.339844 8.988281 4.878906 8.988281 5.765625 C 8.988281 6.113281 8.960938 6.449219 8.988281 6.785156 C 9.015625 7.121094 9.136719 7.53125 9.492188 7.773438 L 9.496094 7.773438 C 9.453125 7.746094 9.945313 8.113281 10.414063 7.945313 C 10.882813 7.773438 11.253906 7.34375 11.78125 6.410156 C 12.242188 5.582031 12.582031 5.117188 12.582031 5.117188 L 12.613281 5.070313 L 12.636719 5.023438 C 12.636719 5.023438 12.628906 5.019531 12.636719 5.015625 L 14.667969 5 C 14.667969 5 14.808594 5 14.945313 5.023438 C 14.949219 5.023438 14.953125 5.023438 14.957031 5.023438 C 14.9375 5.03125 14.953125 5.082031 14.816406 5.359375 C 14.640625 5.714844 14.324219 6.222656 13.875 6.851563 C 13.503906 7.363281 13.226563 7.695313 13.019531 7.9375 C 12.8125 8.175781 12.65625 8.289063 12.554688 8.601563 C 12.503906 8.753906 12.515625 8.980469 12.589844 9.132813 C 12.660156 9.28125 12.746094 9.363281 12.832031 9.445313 C 13.003906 9.609375 13.207031 9.769531 13.503906 10.0625 C 14.085938 10.625 14.414063 11.039063 14.597656 11.3125 C 14.691406 11.453125 14.746094 11.550781 14.78125 11.621094 C 14.816406 11.691406 14.792969 11.664063 14.871094 11.796875 C 14.9375 11.917969 14.925781 11.933594 14.925781 11.925781 C 14.859375 11.964844 14.691406 12 14.6875 12 L 12.988281 12.03125 L 12.941406 12.042969 C 12.941406 12.042969 12.945313 12.046875 12.839844 12.03125 C 12.730469 12.011719 12.558594 11.964844 12.339844 11.808594 C 12.070313 11.617188 11.730469 11.171875 11.394531 10.765625 C 11.230469 10.566406 11.0625 10.371094 10.851563 10.214844 C 10.640625 10.058594 10.308594 9.914063 9.96875 10.027344 C 9.675781 10.121094 9.484375 10.335938 9.363281 10.535156 C 9.242188 10.738281 9.171875 10.949219 9.117188 11.140625 C 9.015625 11.527344 9 11.875 9 11.875 L 9 11.90625 C 9 11.90625 9 11.929688 8.992188 11.964844 C 8.972656 11.972656 8.945313 11.992188 8.929688 12 L 7.734375 12 C 7.734375 12 6.082031 12.085938 4.460938 10.328125 C 2.726563 8.433594 1.183594 5.265625 1.054688 5 L 3.066406 5 C 3.085938 5.007813 3.15625 5.035156 3.148438 5.03125 C 3.101563 4.992188 3.171875 5.078125 3.171875 5.078125 L 3.203125 5.152344 L 3.257813 5.214844 C 3.257813 5.214844 3.566406 5.589844 4.007813 6.386719 C 4.480469 7.242188 4.878906 7.6875 5.324219 7.902344 C 5.769531 8.117188 6.238281 7.964844 6.4375 7.851563 C 6.808594 7.636719 6.851563 7.335938 6.914063 7.058594 C 6.976563 6.78125 6.996094 6.484375 7.007813 6.195313 C 7.03125 5.640625 7 5.167969 7 5.132813 C 6.996094 5.121094 6.996094 4.984375 6.957031 4.835938 C 6.914063 4.683594 6.835938 4.484375 6.6875 4.273438 C 6.625 4.1875 6.566406 4.230469 6.5 4.167969 C 6.777344 4.089844 7.074219 4.011719 7.6875 4.019531 Z"/>
+                </svg>
+            </a>
+            <a href="#" class="footer__instagram">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                     viewBox="0 0 50 50">
+                    <path d="M 30.140625 2 C 26.870375 2 24.045399 2.9969388 22.0625 4.9667969 C 20.079601 6.936655 19 9.823825 19 13.367188 L 19 18 L 13 18 A 1.0001 1.0001 0 0 0 12 19 L 12 27 A 1.0001 1.0001 0 0 0 13 28 L 19 28 L 19 47 A 1.0001 1.0001 0 0 0 20 48 L 28 48 A 1.0001 1.0001 0 0 0 29 47 L 29 28 L 36 28 A 1.0001 1.0001 0 0 0 36.992188 27.125 L 37.992188 19.125 A 1.0001 1.0001 0 0 0 37 18 L 29 18 L 29 14 C 29 12.883334 29.883334 12 31 12 L 37 12 A 1.0001 1.0001 0 0 0 38 11 L 38 3.3457031 A 1.0001 1.0001 0 0 0 37.130859 2.3554688 C 36.247185 2.2382213 33.057174 2 30.140625 2 z M 30.140625 4 C 32.578477 4 34.935105 4.195047 36 4.2949219 L 36 10 L 31 10 C 28.802666 10 27 11.802666 27 14 L 27 19 A 1.0001 1.0001 0 0 0 28 20 L 35.867188 20 L 35.117188 26 L 28 26 A 1.0001 1.0001 0 0 0 27 27 L 27 46 L 21 46 L 21 27 A 1.0001 1.0001 0 0 0 20 26 L 14 26 L 14 20 L 20 20 A 1.0001 1.0001 0 0 0 21 19 L 21 13.367188 C 21 10.22255 21.920305 7.9269075 23.472656 6.3847656 C 25.025007 4.8426237 27.269875 4 30.140625 4 z"></path>
+                </svg>
+            </a>
+            <a href="#" class="footer__instagram">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                     viewBox="0 0 50 50">
+                    <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                </svg>
+            </a>
+
+        </div>
+        <div class="footer__actions">
+            <div class="footer__actions-order">
+                <div class="footer__phone">
+                    <a href="#" class="number">+912 19 999 99 99</a>
+                    <a href="#" class="number">+912 72 733 93 93</a>
+                </div>
+                <a class="button button-call popup-with-zoom-anim" href="#small-dialog">
+                    Заказать звонок
+                </a>
+            </div>
+            <div class="footer__policy" >
+                <a class="footer__actions-policy" href="#" >Политика конфиденциальности</a>
+
+        </div>
+        </div>
+
+    </div>
+</footer>
+
+<div class="big big1">
+    <img src="images/big1.png" alt="big1">
+</div>
+<div class="big big2">
+    <img src="images/big2.png" alt="big2">
+</div>
+<div class="big big3">
+    <img src="images/big3.png" alt="big3">
+</div>
+<div class="big big4">
+    <img src="images/big4.png" alt="big4">
+</div>
+<div class="big big5">
+    <img src="images/big5.png" alt="big5">
+</div>
+
+<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+    <form action="">
+        <div class="container m-3 p-2">
+            <input type="text" class="form-control form-input mb-2 max-w-400" placeholder="Ваш телефон" id="tel">
+            <div class="error-input">Введите ваш номер телефона</div>
+            <button type="button" class="button button-call mt-1" id="submit">Перезвоните мне</button>
+            <div class="thanks">Спасибо! Мы перезвоним вам в течение нескольких минут.</div>
+        </div>
+    </form>
+</div>
+
+<div id="popup-2" class="zoom-anim-dialog mfp-hide">
+    <form id="demo-form" data-parsley-validate="">
+        <label>Ваше имя * :</label>
+        <input type="text" class="form-control" name="fullname" required data-parsley-required-message="Введите ваше имя">
+
+        <label>Email * :</label>
+        <input type="email" class="form-control" name="email" required
+               data-parsley-required-message="Введите email"
+               data-parsley-type-message="Некорректный email">
+
+        <label>Ваш выбор *:</label>
+        <p>
+            Ночная сказка <input type="checkbox" name="flowers[]" value="NochnayaSkazka"><br>
+            Суккуленты <input type="checkbox" name="flowers[]" value="Succulents"><br>
+            Морской мир <input type="checkbox" name="flowers[]" value="MorskoyMir"><br>
+            Мини сад <input type="checkbox" name="flowers[]" value="MiniSad"><br>
+            Марс <input type="checkbox" name="flowers[]" value="Mars"><br>
+            Бонсай <input type="checkbox" name="flowers[]" value="Bonsay"><br>
+        </p>
+        <div id="hobbies-error" style="color: #dc3545; display: none;">
+            Выберите хотя бы один товар
+        </div>
+
+        <p>
+            <label>Как вы о нас узнали:</label>
+            <select name="heard" class="form-control">
+                <option value="">Выберите..</option>
+                <option value="press">Пресса</option>
+                <option value="net">Интернет</option>
+                <option value="mouth">Сарафанное радио</option>
+                <option value="other">Другое</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="message">Сообщение для нас (мин. 20 символов, макс. 100) :</label>
+            <textarea id="message" class="form-control" name="message"
+                      data-parsley-minlength="20" data-parsley-maxlength="100"
+                      data-parsley-minlength-message="Минимум 20 символов"
+                      data-parsley-maxlength-message="Максимум 100 символов"></textarea>
+        </p>
+
+        <br>
+        <input type="button" class="btn button button-call" value="Отправить" id="submit-btn">
+    </form>
+    <div class="thankYou" id="thankYou">Спасибо</div>
+</div>
+
+<div class="loader">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/jquery-3.7.1.min.js"></script>
+<script src="scripts/jquery-ui.min.js"></script>
+<script src="scripts/jquery.magnific-popup.min.js"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/parsley.min.js"></script>
+<script src="scripts/ru.js"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>
